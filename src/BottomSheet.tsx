@@ -34,11 +34,24 @@ const BottomSheet: React.FC<BottomSheetProps> = ({
   const childrenRef = useRef<HTMLDivElement>(null);
   const backdropRef = useRef<HTMLDivElement>(null);
 
-  const [currentSnap, setCurrentSnap] = useState(0);
   const [childrenHeight, setChildrenHeight] = useState(0);
   const [snapPointsWithChildHeight, setSnapPointsWithChildHeight] = useState<
     number[]
   >([]);
+
+  const baseStyle = {
+    position: "absolute" as const,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    transition: "height 0.3s ease-out",
+  };
+
+  const hasTailwindStyles = backgroundColor.startsWith("bg-");
+
+  const backdropStyle = hasTailwindStyles
+    ? baseStyle
+    : { ...baseStyle, backgroundColor };
 
   const updateChildrenHeight = useCallback(() => {
     if (childrenRef.current) {
@@ -81,7 +94,6 @@ const BottomSheet: React.FC<BottomSheetProps> = ({
 
   const setSnap = useCallback(
     (snapIndex: number) => {
-      setCurrentSnap(snapIndex);
       const snapValue = snapPointsWithChildHeight[snapIndex];
       if (sheetRef.current) {
         sheetRef.current.style.height = `${snapValue}px`;
@@ -260,14 +272,8 @@ const BottomSheet: React.FC<BottomSheetProps> = ({
     >
       <div
         ref={backdropRef}
-        style={{
-          position: "absolute",
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor,
-          transition: "height 0.3s ease-out",
-        }}
+        className={hasTailwindStyles ? backgroundColor : ""}
+        style={backdropStyle}
       />
       <div ref={childrenRef}>{children}</div>
     </div>
