@@ -1,0 +1,43 @@
+{
+  "name": "react-bottom-sheet-dialog",
+  "version": "1.0.0",
+  "description": "A lightweight TypeScript bottom sheet dialog for react",
+  "main": "BottomSheet.js",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonypls/react-bottom-sheet-dialog.git"
+  },
+  "keywords": [
+    "React",
+    "React.js",
+    "TypeScript",
+    "Bottom",
+    "Sheet",
+    "Modal",
+    "Dialog",
+    "Mobile"
+  ],
+  "author": "tonypls",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonypls/react-bottom-sheet-dialog/issues"
+  },
+  "homepage": "https://github.com/tonypls/react-bottom-sheet-dialog#readme",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "parcel": "^2.12.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
+  }
+}
