@@ -52,7 +52,7 @@ Here's a basic example of how to use react-bottom-sheet-dialog:
 
 ```TypeScript
 import React from 'react';
-import BottomSheet from 'react-bottom-sheet-dialog';
+import { BottomSheet } from 'react-bottom-sheet-dialog';
 
 const App: React.FC = () => {
   return (
@@ -63,6 +63,7 @@ const App: React.FC = () => {
         onOpen={() => console.log('Sheet opened')}
         onClose={() => console.log('Sheet closed')}
         onSnap={(index) => console.log(`Snapped to index ${index}`)}
+        backgroundColor="white"
       >
         <div style={{ padding: 20 }}>
           <h2>Bottom Sheet Content</h2>

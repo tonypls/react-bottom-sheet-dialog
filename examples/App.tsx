@@ -1,5 +1,5 @@
 import React from "react";
-import BottomSheet from "../src/BottomSheet";
+import { BottomSheet } from "../src/BottomSheet";
 
 const App: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const App: React.FC = () => {
         snapPoints={[100, 300, 600]}
         onOpen={() => console.log("Sheet opened")}
         onClose={() => console.log("Sheet closed")}
-        onSnap={(index) => console.log(`Snapped to index ${index}`)}
+        onSnap={(index: number) => console.log(`Snapped to index ${index}`)}
         backgroundColor="pink"
       >
         <div style={{ padding: 20, backgroundColor: "pink" }}>
