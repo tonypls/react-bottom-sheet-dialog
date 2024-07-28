@@ -12,6 +12,8 @@ This bottom sheet is designed to do as little as the styling as possible so this
 
 [NPM](https://www.npmjs.com/package/react-bottom-sheet-dialog)
 
+Looking for a vanilla JS version? Find it [here](https://www.npmjs.com/package/bottom-sheet-dialog)
+
 ## Features
 
 - Customizable snap points
@@ -49,6 +51,10 @@ pnpm install react-bottom-sheet-dialog
 Here's a basic example of how to use react-bottom-sheet-dialog:
 
 ### React Example
+
+Wrap your component with <BottomSheet><YourComponent/></BottomSheet>
+
+All props are optional, most users will need a `backgroundColor` which is the backdrop when the sheet is expanded above the child component and `snapPoints` a number array of pixel height from the bottom where the sheet will snap to.
 
 ```TypeScript
 import React from 'react';
