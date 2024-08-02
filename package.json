@@ -2,7 +2,10 @@
   "name": "react-bottom-sheet-dialog",
   "version": "1.0.1",
   "description": "A lightweight TypeScript bottom sheet dialog for react",
-  "main": "BottomSheet.js",
+  "main": "dist/BottomSheet.js",
+  "module": "dist/BottomSheet.js",
+  "types": "dist/BottomSheet.d.ts",
+  "type": "module",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

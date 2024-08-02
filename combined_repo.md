@@ -152,7 +152,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ```json
 {
   "name": "react-bottom-sheet-dialog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight TypeScript bottom sheet dialog for react",
   "main": "BottomSheet.js",
   "dependencies": {
